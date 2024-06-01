@@ -1,0 +1,54 @@
+Bubble Sort:
+
+Time Complexity: O(n^2) in the worst and average case.
+Space Complexity: O(1) - in-place sorting.
+Stability: Stable.
+Best Use Case: Small data sets or educational purposes due to its simplicity.
+
+Insertion Sort:
+
+Time Complexity: O(n^2) in the worst and average case.
+Space Complexity: O(1) - in-place sorting.
+Stability: Stable.
+Best Use Case: Small data sets, particularly when data is mostly sorted.
+
+Selection Sort:
+
+Time Complexity: O(n^2) in the worst and average case.
+Space Complexity: O(1) - in-place sorting.
+Stability: Not stable.
+Best Use Case: Small data sets, primarily for educational purposes or simplicity.
+
+Quick Sort:
+
+Time Complexity: O(n log n) in the average case, O(n^2) in the worst case.
+Space Complexity: O(log n) - recursive stack space.
+Stability: Not stable.
+Best Use Case: Large data sets, general-purpose sorting, especially when memory is a concern.
+
+Merge Sort:
+
+Time Complexity: O(n log n) in all cases.
+Space Complexity: O(n) - additional space required for merging.
+Stability: Stable.
+Best Use Case: Large data sets, stable sorting, external sorting, and parallel processing.
+
+
+
+
+
+
+
+_________________________________________________
+
+
+
+Algorithms
+
+
+Dutch National Flag algorithm: ( to sort 0's, 1's, 2's)
+    - we use 3 pointers low, mid, high
+    - from 0 to low-1 (zero's), low to mid-1 (1), mid to high (unsorted) and high+1 to n (2)
+
+
+Kadene's algorithm: (to find the largest sum in subarray)
