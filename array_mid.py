@@ -52,9 +52,40 @@ def maxSumSubarray(arr):
 
     print(arr[start:end+1])
 
-maxSumSubarray(arr)
+# maxSumSubarray(arr)
 
 # maxSumOfSubarray(arr)
+
+arr =  [3,1,-2,-5,2,-4]
+
+def rearrangeArray(arr):
+    pos = []
+    neg = []
+    for i in arr:
+        if i < 0:
+            neg.append(i)
+        else:
+            pos.append(i)
+    
+    i = j = k = 0
+    
+    for i in range(len(arr)//2):
+        arr[2*i] = pos[i]
+        arr[2*i + 1] = neg[i]
+
+    return print(arr)
+
+arr =  [3,1,-2,-5,2,-4]
+rearrangeArray(arr)
+
+def rearrangeArr(arr):
+
+    i = j = 0
+
+    while i < len(arr):
+        pass
+
+
 
 
 
