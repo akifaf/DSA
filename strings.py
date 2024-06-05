@@ -21,4 +21,30 @@ def reverse_sent(sent):
     result = " ".join(sent)
     print(result)
 
-reverse_sent(sent)
+# reverse_sent(sent)
+
+def reverse_int(num):
+    neg = False
+    if num < 0:
+        num *= (-1)
+        neg=True
+    result = 0
+    while num>0 :
+        digit = num%10
+        result = (result * 10) + digit
+        num = num // 10
+    
+    return result if neg==False else -result
+
+# print(reverse_int(-23400))
+import math
+def reverse_integer(num):
+    result =0
+    while num != 0:
+        digit = num%10 if num>0 else num%-10
+        result = (result*10) + digit
+        num = math.trunc(num/10)
+
+    return result
+
+print(reverse_integer(-123))
