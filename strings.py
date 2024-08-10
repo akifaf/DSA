@@ -47,4 +47,27 @@ def reverse_integer(num):
 
     return result
 
-print(reverse_integer(-123))
+# print(reverse_integer(-123))
+
+def largestOddNum(num):
+    for i in range(len(num)-1, -1,-1):
+        # print(num[i], 'num')
+        if int(num[i]) % 2 != 0:
+            # print(num[i])
+            return print(num[:i+1])
+        
+    return print('')
+
+# largestOddNum("123234234")
+
+def palindrome(num):
+    org_num = num
+    reverse =  0
+    while num>0:
+        digit = num%10
+        reverse = reverse*10 + digit
+        num //= 10
+    return True if org_num==reverse else False
+    
+
+print(palindrome(242))
