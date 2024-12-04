@@ -3,7 +3,7 @@ s = "()(())"
 ans = ""
 count = 0
 
-for ch in s:
+for ch in s: 
     if ch == '(':
         if count :
             ans += ch

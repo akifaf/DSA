@@ -37,6 +37,67 @@ def insertion_sort(arr):
 
     return arr
 
+# insertion_sort(arr)
+print(arr)
+
+# def merge_sort(arr):
+
+#     if len(arr) > 1:
+#         mid = len(arr) // 2
+#         left_arr = arr[:mid]
+#         right_arr = arr[mid:]
+
+#         merge_sort(left_arr)
+#         merge_sort(right_arr)
+
+#         i = j = k = 0
+
+#         while i < len(left_arr) and j < len(right_arr):
+#             if left_arr[i] < right_arr[j]:
+#                 arr[k] = left_arr[i]
+#                 i += 1
+#                 k += 1
+#             else:
+#                 arr[k] = right_arr[j]
+#                 j += 1
+#                 k += 1
+        
+#         while i < len(left_arr):
+#             arr[k] = left_arr[i]
+#             i += 1
+#             k += 1
+#         while j < len(right_arr):
+#             arr[k] = right_arr[j]
+#             j += 1
+#             k += 1
+
+def quick_sort(arr, left, right):
+
+    if left < right:
+        partition_pos = partition(arr, left, right)
+        quick_sort(arr, left, partition_pos-1)
+        quick_sort(arr, partition_pos+1, right)
+
+    
+
+def partition(arr, left, right):
+
+    pivot = arr[right]
+    i = left
+    j = right -1
+
+    while i < j:
+        while i < right and arr[i] < pivot:
+            i += 1
+        while j > left and arr[j] >= pivot:
+            j -= 1
+        if i < j and arr[i] > arr[j]:
+            arr[i], arr[j] = arr[j], arr[i]
+
+    if arr[i] > pivot:
+        arr[i], arr[right] = arr[right], arr[i]    
+
+
 def merge_sort(arr):
 
     if len(arr) > 1:
@@ -50,26 +111,23 @@ def merge_sort(arr):
         i = j = k = 0
 
         while i < len(left_arr) and j < len(right_arr):
+
             if left_arr[i] < right_arr[j]:
                 arr[k] = left_arr[i]
                 i += 1
-                k += 1
             else:
                 arr[k] = right_arr[j]
                 j += 1
-                k += 1
-        
+            k += 1
+
         while i < len(left_arr):
             arr[k] = left_arr[i]
             i += 1
             k += 1
-        while j < len(right_arr):
+        while j < len(left_arr):
             arr[k] = right_arr[j]
             j += 1
             k += 1
-
-def quick_sort(arr):
-    pass
-
-def partition(arr):
-    pass
+    
+merge_sort(arr)
+print(arr)

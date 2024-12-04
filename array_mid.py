@@ -84,9 +84,3 @@ def rearrangeArr(arr):
 
     while i < len(arr):
         pass
-
-
-
-
-
-

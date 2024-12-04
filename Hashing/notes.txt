@@ -1,0 +1,16 @@
+Hashing:
+
+Algorithm which helps searching in constant time.
+
+
+Collision in hashing: If a hash function produces the same hash for different value it is Collision
+
+for handling collision there are 2 types:
+
+1. Closed Address - In the same address using linked list or tree
+2. Open Address -
+    a. Linear Probbing 
+    b. Quadratic Probbing
+
+Closed Address:
+     
